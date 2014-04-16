@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+<meta charset="utf-8"/>
+<script src="js/val-cont.js"></script>
+<link rel="stylesheet" type="text/css" href="Css/Contactos.css"/>
+<link href='http://fonts.googleapis.com/css?family=Croissant+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic' rel='stylesheet' type='text/css'>
+<title>El Gourmet - Contactos</title>
+</head>
+
+<body>
+     <div class="contenedor">
+			  <header id="Encabezado">
+                              <div id="Titulo">                                      
+				       <h3>Restaurant</h3>  
+				       <h1>El Gourmet</h1>                                      
+				</div>
+                             
+                               <div id="facebook">
+                                    <img class="ima" src="Ima/facebook.png"  > 
+                                    <a href="#" class="link" title="Siguenos en Facebook" >Facebook</a>
+                               </div> 
+                              <div id="Youtube">
+                                  <img class="ima" src="Ima/Youtube.png"  > 
+                                    <a href="#" class="link" title="Siguenos en Youtube"  >Youtube</a>
+                               </div>  
+                             <div id="Twitter">
+                                   <img class="ima" src="Ima/twitter-3d-front-icon.png"  > 
+                                    <a href="#" class="link" title="Siguenos en Youtube" >Twitter</a>
+                               </div>  
+                                  
+                          </header>                        
+                          <nav id="navegador">
+						<ul>                                                      
+                                                	<li><a href="index.html"  > Inicio </a></li>
+                                                        <li><a href="Informacion.html" > Informacion</a></li>
+				         		<li><a href="Carta.html" > Carta</a></li>
+							<li><a href="Reservas.html"  > Reservas </a></li>
+							<li><a href="Contactos.html" class="current" > Contactos </a></li>
+                                                        <li ><a href="Imagenes.html" class="ultimo"> Imagenes </a></li> 
+                                                        
+                                           		
+							
+						</ul>
+			 </nav>
+                            
+			  <section>
+                                    <header id="CabeSec">
+                                          <h1>Contactos</h1>
+                                    </header>
+                              <div id="seccionmedia">
+                              <form action="#"  method="get" name="formulario" id="form" novalidate onsubmit="return confirmar();">
+                                  <fieldset>
+                                      <legend class="Leyenda"> Via Mail</legend>
+                                      <table class="tabla">
+                                              <tr>
+                                                  <td  class="eti"><label for="nomb"> Nombre: </label></td>
+                                                  <td > <input type="text" id="nomb" name="paramnomb"  placeholder="Ingrese su Nombre" onkeyup="valnomb();"><span>*</span></td>
+                                                  <td id="msenom"></td>
+                                              </tr>                                              
+                                              <tr>
+                                                  <td  class="eti"><label for="em"> E-mail: </label></td>
+                                                  <td > <input type="email" id="em"  name="paramemail"  placeholder="Ingrese el Correo Electronico" onkeyup="valeem();"><span>*</span></td>
+                                                  <td id="mseemail"></td>
+                                              </tr>
+                                              <tr>
+                                                  <td  class="eti"><label for="tf"> Telefono: </label></td>
+                                                  <td ><input type="tel" id="tf" name="paramttf"   placeholder="Ingrese su Telefono Fijo" ></td>
+                                                   <td id="msetf"></td>
+                                              </tr>                                              
+                                              <tr>
+                                                  <td  class="eti"><label for="com"> Comentario: </label></td>
+                                                  <td > <textarea  id="com" name="paramcom" onkeyup="valecom();" ></textarea><span>*</span></td>
+                                                  <td id="mseco"></td>
+                                              </tr>
+                                   </table>
+                                  </fieldset>
+                                  <fieldset >
+                                      <input type="reset" name="reset" value="Borrar"  onclick="borrarerror();"/>
+                                        <input type="submit" name="submit" value="Enviar" />&nbsp;<span id="fin" title="Debe Completar los campos con *"> * Datos Obligatorios</span>
+                                  </fieldset>
+                              </form>
+                              <div id="contact">
+                                  <h1 id="contacti">Via Tel: </h1>
+                                  <span>Tel Nº1: (0385)-422-3264</span><br>
+                                  <span>Tel Nº2: (0385)-422-3255</span><br>
+                              </div>
+                              </div>    
+                               
+			  </section>
+                          <footer id="piedepagina">
+                                <div class="pie"><span class="footer">@ </span>2013 Andres,S.A</div>
+				<div class="pie"><span class="footer">Dir: </span> Libertad 346</div>
+			        <div class="pie"><span class="footer">Tel: </span> (0385)-422-3264</div>
+                                
+			  </footer>
+
+				
+    </div>
+
+
+</body>
+</html>

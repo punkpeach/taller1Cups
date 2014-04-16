@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+<meta charset="utf-8"/>
+<script src="js/validacion.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/jquery-1.6.2.min.js"></script>
+<script src="js/jquery-ui-1.8.15.custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="Css/Reservas.css"/>
+<link href='http://fonts.googleapis.com/css?family=Croissant+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic' rel='stylesheet' type='text/css'>
+<title>El Gourmet - Reservas</title>
+</head>
+
+<body>
+     <div class="contenedor">
+			  <header id="Encabezado">
+                              <div id="Titulo">                                      
+				       <h3>Restaurant</h3>  
+				       <h1>El Gourmet</h1>                                      
+				</div>
+                             
+                               <div id="facebook">
+                                    <img class="ima" src="Ima/facebook.png"  > 
+                                    <a href="#" class="link" title="Siguenos en Facebook" >Facebook</a>
+                               </div> 
+                              <div id="Youtube">
+                                  <img class="ima" src="Ima/Youtube.png"  > 
+                                    <a href="#" class="link" title="Siguenos en Youtube"  >Youtube</a>
+                               </div>  
+                             <div id="Twitter">
+                                   <img class="ima" src="Ima/twitter-3d-front-icon.png"  > 
+                                    <a href="#" class="link" title="Siguenos en Youtube" >Twitter</a>
+                               </div>  
+                                  
+                          </header>                        
+                          <nav id="navegador">
+						<ul>                                                      
+                                                	<li><a href="index.html"  > Inicio </a></li>
+                                                        <li><a href="Informacion.html" > Informacion</a></li>
+				         		<li><a href="Carta.html" > Carta</a></li>
+							<li><a href="Reservas.html" class="current" > Reservas </a></li>
+							<li><a href="Contactos.html" > Contactos </a></li>
+                                                        <li ><a href="Imagenes.html" class="ultimo"> Imagenes </a></li> 
+                                                        
+                                           		
+							
+						</ul>
+			 </nav>
+                            
+			  <section>
+                                    <header id="CabeSec">
+                                          <h1>Reservas</h1>
+                                    </header>
+                              <form action="#"  method="get" name="formulario" id="form" novalidate onsubmit="return confirmar();">
+                                  <fieldset>                                      
+                                      <legend class="Leyenda">Datos Personales</legend>
+                                      <table class="tabla">
+                                              <tr>
+                                                  <td  class="eti"><label for="nomb"> Nombre: </label></td>
+                                                  <td > <input type="text" id="nomb" name="paramnomb"  placeholder="Ingrese su Nombre" onkeyup="valnomb();"><span>*</span></td>
+                                                  <td id="msenom" class="error"></td>
+                                              </tr>
+                                              <tr>
+                                                 <td  class="eti"> <label for="ape">Apellido: </label></td>
+                                                 <td > <input type="text" id="ape" name="paramape"  placeholder="Ingrese su Apellido" onkeyup="valape();"><span>*</span></td>
+                                                  <td id="mseape" class="error"></td>
+                                              </tr>
+                                              <tr>
+                                                 <td  class="eti"><label for="dir">Direccion: </label></td>
+                                                  <td > <input type="text" id="dir" name="paramdir" placeholder="Ingrese su Direccion"></td>
+                                                   <td ></td>
+                                              </tr>
+                                              <tr>
+                                                  <td  class="eti"><label> Pais: </label></td>
+                                                  <td> <select id="listap" name="pais">
+                                                        <option  value=" "  ></option>
+                                                        <option value="Arg">Argentina</option>
+                                                        <option value="saab">Saab</option>
+                                                        <option value="opel">Opel</option>
+                                                        <option value="audi">Audi</option>
+                                                      </select>
+                                                  </td>
+                                                  <td ></td>
+                                                  
+                                              </tr>
+                                              <tr>
+                                                  <td  class="eti"><label > Provincia: </label></td>
+                                                  <td > <select id="listaprov" name="provincia">
+                                                        <option  value=" "  ></option>
+                                                        <option value="Arg">Santiago del Estero</option>
+                                                        <option value="saab">Saab</option>
+                                                        <option value="opel">Opel</option>
+                                                        <option value="audi">Audi</option>
+                                                      </select>
+                                                  <td>    
+                                              </tr>
+                                              <tr>
+                                                  <td  class="eti"><label> Localidad: </label></td>
+                                                  <td > <select id="listal" name="localidad">
+                                                        <option  value=" "  ></option>
+                                                        <option value="Arg">Santiago Del Estero</option>
+                                                        <option value="saab">Saab</option>
+                                                        <option value="opel">Opel</option>
+                                                        <option value="audi">Audi</option>
+                                                      </select>
+                                                  <td>
+                                              </tr>
+                                              <tr>
+                                                  <td  class="eti"><label for="cod"> Codigo Postal: </label></td>
+                                                  <td ><input type="text" id="cod" name="paramcod"  placeholder="Ingrese el codigo Postal"></td>
+                                                   <td></td>
+                                              </tr>
+                                              <tr>
+                                                  <td  class="eti"><label for="em"> E-mail: </label></td>
+                                                  <td> <input type="email" id="em"  name="paramemail"  placeholder="Ingrese el Correo Electronico" onkeyup="valeem();"><span>*</span></td>
+                                                  <td id="mseemail" class="error"></td>
+                                              </tr>
+                                              <tr>
+                                                  <td  class="eti"><label for="tf"> Telefono Fijo: </label></td>
+                                                  <td ><input type="tel" id="tf" name="paramttf"   placeholder="Ingrese su Telefono Fijo" onkeyup="valetf();"><span>*</span></td>
+                                                   <td id="msetf" class="error"></td>
+                                              </tr>
+                                              <tr>
+                                                  <td  class="eti"><label for="tc"> Telefono Cel: </label></td>
+                                                  <td ><input type="tel" id="tc" name="paramtc"  placeholder="Ingrese su Telefono Celular"></td>
+                                                   <td ></td>
+                                              </tr>
+                                              
+                                   </table>
+                                  </fieldset>
+                                  <fieldset>
+                                        <legend class="Leyenda"> Datos de Reserva</legend>
+                                        <table class="tabla">
+                                                <tr>
+                                                    <td class="eti"><label > Nro de Personas: </label></td>
+                                                    <td ><input type="radio" class="nropers" name="cantidad" value="1"   onclick="deshabilitar(); valradio();">1 Pers.
+                                                        <input type="radio" class="nropers" name="cantidad" value="2"  onclick="deshabilitar(); valradio(); ">2 Pers.
+                                                        <input type="radio" class="nropers" name="cantidad" value="4" onclick="deshabilitar(); valradio(); ">4 Pers.
+                                                        <label > Nro: </label><input type="text" id="nrootros" name="otro"  onclick="uncheck(document.formulario.cantidad);" onkeyup="valradio(); " >
+                                                        <span>*</span></td>
+                                                    <!--<td > <input type="text" id="nropers" name="paramnro" required placeholder="How many to buy (1-10)"><span>*</span></td>-->
+                                                    <td id="msenro" class="error"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="eti"><label for="dia"> Fecha de Reserva: </label></td>
+                                                    <td > <input type="text" id="dia" name="paramdia" onkeyup="valfech();"><span>*</span></td>
+                                                    <td id="msefech" class="error"></td>
+                                                </tr> 
+                                                <tr>
+                                                     <td  ><label for="hora"> Hora: </label></td>
+                                                     <td ><input type="text" id="hora" name="paramhora" onkeyup="valhor();"><span>*</span></td>
+                                                    <td id="msehor" class="error"></td>
+                                                </tr>
+                                                <tr>
+                                                  <td  class="eti"><label for="com"> Comentario: </label></td>
+                                                  <td > <textarea  id="com" name="paramcom"  ></textarea></td>
+                                                   <td ></td>
+                                                </tr>
+                                        </table>
+
+                                  </fieldset>
+                                   
+                                  <fieldset >
+                                      <input type="reset" name="reset" value="Borrar"  onclick="borrarerror();"/>
+                                        <input type="submit" name="submit" value="Enviar" />&nbsp;<span id="fin" title="Debe Completar los campos con *"> * Datos Obligatorios</span>
+                                  </fieldset>
+                                  
+                                  
+                              </form>
+                                  
+                               
+			  </section>
+                          <footer id="piedepagina">
+                                <div class="pie"><span class="footer">@ </span>2013 Andres,S.A</div>
+				<div class="pie"><span class="footer">Dir: </span> Libertad 346</div>
+			        <div class="pie"><span class="footer">Tel: </span> (0385)-422-3264</div>
+                                
+			  </footer>
+
+				
+    </div>
+
+
+</body>
+</html>

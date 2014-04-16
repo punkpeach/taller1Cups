@@ -1,0 +1,36 @@
+    $(document).ready(function(){
+        $('#toggle1').click(function(){
+            $('#1').slideDown('slow');  
+        });
+    });
+    
+    $(document).ready(function(){
+        $('#contraer').click(function(){
+            $('#1').slideUp('slow');  
+        });
+    }
+);     
+        $(document).ready(function(){
+        $('#toggle2').click(function(){
+            $('#2').slideDown('slow'); 
+        });
+    }
+); 
+    $(document).ready(function(){
+        $('#contraer2').click(function(){
+            $('#2').slideUp('slow');  
+        });
+    }
+);   
+            $(document).ready(function(){
+        $('#toggle3').click(function(){
+            $('#3').slideDown('slow'); 
+        });
+    }
+); 
+    $(document).ready(function(){
+        $('#contraer3').click(function(){
+            $('#3').slideUp('slow');  
+        });
+    }
+);  
